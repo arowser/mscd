@@ -173,7 +173,7 @@ func (s *MastercoinServer) Start(playback bool) {
 		}
 
 
-		iter := s.db.GetDb().NewIterator(nil)
+		iter := s.db.GetDb().NewIterator(nil,nil)
 		for iter.Next() {
 			// Remember that the contents of the returned slice should not be modified, and
 			// only valid until the next call to Next.
